@@ -1,0 +1,24 @@
+﻿<Window x:Class="UsersManager.DialogAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Adding New User" Height="300" Width="300"
+        ResizeMode="NoResize" >
+    <StackPanel Margin="10" Grid.Column="0" Grid.Row="0">
+        <TextBox Margin="15,2" Name="FirstName">First Name</TextBox>
+        <TextBox Margin="15,2" Name="LastName">Last Name</TextBox>
+        <TextBox Margin="15,2"
+                 Name="MultipassportData"
+                 TextWrapping="Wrap"
+                 AcceptsReturn="True"
+                 MaxHeight="40">
+            Passort Data (serial-number; organization, who gave and when)
+        </TextBox>
+        <Label Margin="30,5,0,0">Select birthsday:</Label>
+        <DatePicker Margin="15,0" Name="Birthsday"></DatePicker>
+        <DockPanel Margin="15,10" HorizontalAlignment="Right">
+            <Button Margin="2" Width="100" DockPanel.Dock="Left" Click="Confirm">Add</Button>
+            <Button Margin="2" Width="100" DockPanel.Dock="Right" Click="Cancel">Cancel</Button>
+        </DockPanel>
+        <Label Name="Error" Margin="30,5,0,0"></Label>
+    </StackPanel>
+</Window>
